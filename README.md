@@ -8,23 +8,16 @@ Tested in Laravel4 framework.
 
 ## Usage
 
-//Create new merger instance
+// Autoload classses..
 
-$merger = new PDFMerge;
+// and we can do stuff
 
-// config params
+$pdf = new \Jurosh\PDFMerge\PDFMerger;
 
-$params = [
-    'pages' => 'all',
-    'orientation' => 'vertical'
-];
+// add as many pdfs as you want
+$pdf->addPDF('path/to/source/file.pdf', 'all', 'vertical')
+  ->addPDF('path/to/source/file1.pdf', 'all')
+  ->addPDF('path/to/source/file2.pdf', 'all', 'horizontal');
 
-//Put files IN
-
-$merger
-
-    ->addPDF('path/to/file.pdf', $params)
-
-    ->addPDF('path/to/second/file.pdf')
-
-   ->merge('file', 'path/to/output/directory/file.pdf');
+// call merge
+$pdf->merge('file', 'path/to/export/dir/file.pdf');

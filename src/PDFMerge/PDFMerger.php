@@ -15,7 +15,7 @@ class PDFMerger {
      */
     private $_files;
     private $_fpdi;
-
+    
     /**
      * Add a PDF for inclusion in the merge with a valid file path.
      * Params are defined like array:  

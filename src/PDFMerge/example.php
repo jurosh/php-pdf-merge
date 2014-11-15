@@ -1,20 +1,14 @@
 <?php
-/**
- * Include library, should be autoloaded
- */
-require 'PDFMerge.php';
-
-use \Jurosh\PDFMerge\PDFMerger;
 
 /**
- * Create new merger instance
+ * Autoload classses...
  */
-$merger = new PDFMerger;
+$pdf = new \Jurosh\PDFMerge\PDFMerger;
 
-/**
- * Put files IN
- */
-$merger
-    ->addPDF('path/to/file.pdf')
-    ->addPDF('path/to/second/file.pdf')
-   ->merge('file', 'path/to/output/directory/file.pdf');
+// add as many pdfs as you want
+$pdf->addPDF('path/to/source/file.pdf', 'all', 'vertical')
+  ->addPDF('path/to/source/file1.pdf', 'all')
+  ->addPDF('path/to/source/file2.pdf', 'all', 'horizontal');
+
+// call merge
+$pdf->merge('file', 'path/to/export/dir/file.pdf');
