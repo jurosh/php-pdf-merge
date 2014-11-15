@@ -1,17 +1,14 @@
-<?php
-
-/**
- * basic merging of PDF files into one file
- *
- */
-
-namespace Jurosh\PDFMerge;
+<?php namespace Jurosh\PDFMerge;
 
 use Exception;
 use fpdi\FPDI;
 use fpdf\FPDF;
 
-class PDFMerge {
+/**
+ * Basic merging of PDF files into one file
+ *
+ */
+class PDFMerger {
 
     /**
      * @var type Array of PDFObject-s

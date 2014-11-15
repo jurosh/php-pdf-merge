@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jurosh\PDFMerge;
 
 /**
  * Description of PdfObject

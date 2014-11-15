@@ -4,6 +4,8 @@
 
 Pdf merging with modes portrait/landscape.
 
+Tested in Laravel4 framework.
+
 ## Usage
 
 //Create new merger instance

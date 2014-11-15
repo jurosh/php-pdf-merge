@@ -4,12 +4,12 @@
  */
 require 'PDFMerge.php';
 
-use \Jurosh\PDFMerge\PDFMerge;
+use \Jurosh\PDFMerge\PDFMerger;
 
 /**
  * Create new merger instance
  */
-$merger = new PDFMerge;
+$merger = new PDFMerger;
 
 /**
  * Put files IN
