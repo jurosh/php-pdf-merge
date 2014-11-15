@@ -2,7 +2,9 @@
 /**
  * Include library, should be autoloaded
  */
-include 'PDFMerge.php';
+require 'PDFMerge.php';
+
+use \Jurosh\PDFMerge\PDFMerge;
 
 /**
  * Create new merger instance
