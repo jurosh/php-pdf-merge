@@ -1,5 +1,11 @@
 # PDF Merge for PHP
 
+PDF Merge library for PHP.
+
+Install in composer:
+
+"jurosh/pdf-merge": "dev-master"
+
 ## Highlights
 
 Pdf merging with modes portrait/landscape.
