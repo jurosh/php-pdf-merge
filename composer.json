@@ -1,6 +1,7 @@
 {
     "name": "jurosh/pdf-merge",
     "description": "PHP PDF Merger",
+    "version": "0.9",
     "require": {
         "itbz/fpdi": "dev-master"
     },
