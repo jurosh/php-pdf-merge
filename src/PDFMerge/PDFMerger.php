@@ -27,15 +27,15 @@ class PDFMerger {
      * @param $param
      * @return void
      */
-    public function addPDF($filepath, $params = ['pages' => 'all', 'orientation' => 'vertical']) {
+    public function addPDF($filepath, $pages = 'all', $orientation = 'vertical') {
         if (file_exists($filepath)) {
-            $file = new \PdfObject;
+            $file = new PdfObject;
             
-            if (strtolower($params->pages) != 'all') {
-                $file->pages = $this->_rewritepages($params->pages);
+            if (strtolower($pages) != 'all') {
+                $file->pages = $this->_rewritepages($pages);
             }
             
-            $file->orientation = $params->orientation;
+            $file->orientation = $orientation;
             $file->path = $filepath;
 
             $this->_files[] = $file;
@@ -60,7 +60,7 @@ class PDFMerger {
         $fpdi = new FPDI;
 
         // merger operations
-        /* @var $file \PdfObject */
+        /* @var $file PdfObject */
         foreach ($this->_files as $file) {
             $filename = $file->path;
             $filepages = $file->pages;
