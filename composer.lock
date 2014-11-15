@@ -1,0 +1,98 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "4b634df22b015b64378f2e6b79af1727",
+    "packages": [
+        {
+            "name": "itbz/fpdf",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hanneskod/fpdf.git",
+                "reference": "06d02a7bf227a62d37691a4e7e9c3a35efcb41c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hanneskod/fpdf/zipball/06d02a7bf227a62d37691a4e7e9c3a35efcb41c3",
+                "reference": "06d02a7bf227a62d37691a4e7e9c3a35efcb41c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "fpdf": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "no usage restriction"
+            ],
+            "description": "Unofficial PSR-0 compliant version of the FPDF library",
+            "homepage": "http://www.fpdf.org/",
+            "time": "2013-12-27 14:18:15"
+        },
+        {
+            "name": "itbz/fpdi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hanneskod/fpdi.git",
+                "reference": "0f4d9027955dfc7edbb67a2ff4c6a333d4cc9d61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hanneskod/fpdi/zipball/0f4d9027955dfc7edbb67a2ff4c6a333d4cc9d61",
+                "reference": "0f4d9027955dfc7edbb67a2ff4c6a333d4cc9d61",
+                "shasum": ""
+            },
+            "require": {
+                "itbz/fpdf": "1.7.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "hanneskod/classtools": "~1.0",
+                "nikic/php-parser": "~1.0",
+                "phpunit/phpunit": "4.*",
+                "symfony/finder": "~2.3",
+                "tecnick.com/tcpdf": "6.*"
+            },
+            "suggest": {
+                "tecnick.com/tcpdf": "FPDI supports TCPDF as a replacement for FPDF"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "fpdi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Unofficial PSR-4 compliant version of the FPDI library",
+            "time": "2014-10-20 12:52:11"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "itbz/fpdi": 20
+    },
+    "prefer-stable": false,
+    "platform": [
+
+    ],
+    "platform-dev": [
+    ]
+}
