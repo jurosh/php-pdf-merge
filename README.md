@@ -14,20 +14,17 @@ Tested in Laravel4 framework.
 
 ## Usage
 
-// Autoload classses..
+```php
+// Autoload classses...
 
 // and we can do stuff
-
 $pdf = new \Jurosh\PDFMerge\PDFMerger;
 
 // add as many pdfs as you want
-
 $pdf->addPDF('path/to/source/file.pdf', 'all', 'vertical')
-
   ->addPDF('path/to/source/file1.pdf', 'all')
-
   ->addPDF('path/to/source/file2.pdf', 'all', 'horizontal');
 
-// call merge
-
+// call merge, output format `file`
 $pdf->merge('file', 'path/to/export/dir/file.pdf');
+```
