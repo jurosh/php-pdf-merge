@@ -4,7 +4,9 @@ PDF Merge library for PHP.
 
 Install in composer:
 
+```json
 "jurosh/pdf-merge": "dev-master"
+```
 
 ## Highlights
 
