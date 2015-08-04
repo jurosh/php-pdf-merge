@@ -7,6 +7,7 @@ use fpdf\FPDF;
 /**
  * Basic merging of PDF files into one file
  *
+ * TODO: check newer https://github.com/tecnickcom/TCPDF
  */
 class PDFMerger {
 
@@ -14,8 +15,7 @@ class PDFMerger {
      * @var type Array of PDFObject-s
      */
     private $_files;
-    private $_fpdi;
-    
+
     /**
      * Add a PDF for inclusion in the merge with a valid file path.
      * Params are defined like array:  
@@ -25,7 +25,7 @@ class PDFMerger {
      * Pages should be formatted: 1,3,6, 12-16.
      * @param $filepath
      * @param $param
-     * @return void
+     * @return PDFMerger
      */
     public function addPDF($filepath, $pages = 'all', $orientation = 'vertical') {
         if (file_exists($filepath)) {
