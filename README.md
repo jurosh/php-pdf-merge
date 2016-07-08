@@ -12,7 +12,7 @@ Install in composer:
 
 Pdf merging with modes portrait/landscape.
 
-Tested in Laravel4 framework.
+Tested in Laravel4 & Laravel5 framework (but still can be used without any framework as standalone utility).
 
 ## Usage
 
