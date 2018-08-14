@@ -1,8 +1,7 @@
 <?php namespace Jurosh\PDFMerge;
 
 use Exception;
-use fpdi\FPDI;
-use fpdf\FPDF;
+use setasign\Fpdi\Fpdi AS FPDI;
 
 /**
  * Basic merging of PDF files into one file
@@ -73,7 +72,7 @@ class PDFMerger {
                     $template = $fpdi->importPage($i);
                     $size = $fpdi->getTemplateSize($template);
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
+                    $fpdi->AddPage($file->getOrientationCode(), array($size['width'], $size['height']));
                     $fpdi->useTemplate($template);
                 }
             } else {
