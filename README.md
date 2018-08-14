@@ -2,10 +2,14 @@
 
 PDF Merge library for PHP.
 
-Install in composer:
+Install with composer:
+
+`composer require jurosh/pdf-merge`
+
+Should add dependency:
 
 ```json
-"jurosh/pdf-merge": "dev-master"
+"jurosh/pdf-merge": "^2.0"
 ```
 
 ## Highlights
@@ -17,9 +21,9 @@ Tested in Laravel4 & Laravel5 framework (but still can be used without any frame
 ## Usage
 
 ```php
-// Autoload classses...
+// Autoload composer classses...
 
-// and we can do stuff
+// and now we can use library
 $pdf = new \Jurosh\PDFMerge\PDFMerger;
 
 // add as many pdfs as you want
@@ -30,3 +34,7 @@ $pdf->addPDF('path/to/source/file.pdf', 'all', 'vertical')
 // call merge, output format `file`
 $pdf->merge('file', 'path/to/export/dir/file.pdf');
 ```
+
+That's it!
+
+Enjoy and leave star if you like it :)
