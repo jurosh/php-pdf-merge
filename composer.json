@@ -10,7 +10,8 @@
   "license": "MIT",
   "require": {
     "php": ">=5.6.20",
-    "setasign/fpdi-fpdf": "^2.0"
+    "setasign/fpdf": "^1.8",
+    "setasign/fpdi": "^2.3"
   },
   "authors": [
     {
