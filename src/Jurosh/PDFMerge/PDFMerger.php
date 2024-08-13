@@ -2,6 +2,7 @@
 
 use Exception;
 use setasign\Fpdi\Fpdi AS FPDI;
+use setasign\Fpdi\PdfReader\PageBoundaries;
 
 /**
  * Basic merging of PDF files into one file
@@ -14,6 +15,11 @@ class PDFMerger {
      * @var type Array of PDFObject-s
      */
     private $_files;
+    private $_importExternalLinks;
+
+    public function __construct($importExternalLinks = false) {
+        $this->_importExternalLinks = $importExternalLinks;
+    }
 
     /**
      * Add a PDF for inclusion in the merge with a valid file path.
@@ -69,7 +75,7 @@ class PDFMerger {
             //add the pages
             if ($filepages == 'all') {
                 for ($i = 1; $i <= $count; $i++) {
-                    $template = $fpdi->importPage($i);
+                    $template = $fpdi->importPage($i, PageBoundaries::CROP_BOX, true, $this->_importExternalLinks);
                     $size = $fpdi->getTemplateSize($template);
 
                     $fpdi->AddPage($file->getOrientationCode(), array($size['width'], $size['height']));
