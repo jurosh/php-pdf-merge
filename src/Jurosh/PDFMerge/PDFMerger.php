@@ -26,7 +26,7 @@ class PDFMerger {
      * @param $param
      * @return PDFMerger
      */
-    public function addPDF($filepath, $pages = 'all', $orientation = 'vertical') {
+    public function addPDF($filepath, $pages = 'all') {
         if (file_exists($filepath)) {
             $file = new PdfObject;
             
@@ -34,7 +34,6 @@ class PDFMerger {
                 $file->pages = $this->_rewritepages($pages);
             }
             
-            $file->orientation = $orientation;
             $file->path = $filepath;
 
             $this->_files[] = $file;
@@ -72,7 +71,7 @@ class PDFMerger {
                     $template = $fpdi->importPage($i);
                     $size = $fpdi->getTemplateSize($template);
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['width'], $size['height']));
+                    $fpdi->AddPage($size['width'] > $size['height'] ? 'L' : 'P', array($size['width'], $size['height']));
                     $fpdi->useTemplate($template);
                 }
             } else {
@@ -82,7 +81,7 @@ class PDFMerger {
                     }
                     $size = $fpdi->getTemplateSize($template);
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
+                    $fpdi->AddPage($size['width'] > $size['height'] ? 'L' : 'P', array($size['width'], $size['height']));
                     $fpdi->useTemplate($template);
                 }
             }
